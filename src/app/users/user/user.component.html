@@ -1,0 +1,8 @@
+<p>User with ID {{ user.id }} loaded.</p>
+<p>User name is {{ user.name }}</p>
+<hr>
+
+
+<!-- If currently we are currently on the same route, then (this.route.snapshot.params['id']) wouldn't work bcoz angular wont rerender the component to avoid the performance issues -->
+<a [routerLink]="['/users', 22, 'David']">Load David</a> 
+<!-- So we will have to use params observable(i.e, this.route.params.subscribe())-->
